@@ -14,14 +14,14 @@ pub fn read_and_write(path: PathBuf) {
         .unwrap();
 
     for _ in 0..doc.get_num_pages() {
-        if let Err(e) = writeln!(new_file, "{:#?}",&doc.get_current_str().unwrap().0) {
+        if let Err(e) = writeln!(
+                new_file,
+                "{}",
+                &doc.get_current_str().unwrap().0
+            ) {
             eprintln!("Couldn't write to file: {}", e);
         };
 
         doc.go_next();
-        println!("\n\naaaaaaaaaaaaaaa\n\n");
     }
 }
-
-
-
