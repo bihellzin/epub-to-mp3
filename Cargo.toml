@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 epub = "2.0.0"
 pdf = "0.8.0"
+tts = "0.25.0"
